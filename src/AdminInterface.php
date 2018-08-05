@@ -13,9 +13,10 @@ namespace Alpipego\AWP\Settings;
  * Interface AdminInterface
  * @package Alpipego\WpLib
  */
-interface AdminInterface {
-	/**
-	 * @return mixed
-	 */
-	public function run();
+interface AdminInterface
+{
+    /**
+     * @return mixed
+     */
+    public function run();
 }
