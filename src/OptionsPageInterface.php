@@ -13,19 +13,20 @@ namespace Alpipego\AWP\Settings;
  * Interface OptionsPage
  * @package Alpipego\WpLib
  */
-interface OptionsPageInterface {
-	/**
-	 * Add the page to admin menu action
-	 */
-	public function run();
+interface OptionsPageInterface
+{
+    /**
+     * Add the page to admin menu action
+     */
+    public function run();
 
-	/**
-	 * Add the (sub)page
-	 */
-	public function addPage();
+    /**
+     * Add the (sub)page
+     */
+    public function addPage();
 
-	/**
-	 * Include the view
-	 */
-	public function callback();
+    /**
+     * Include the view
+     */
+    public function callback();
 }

@@ -3,6 +3,11 @@
     "description": "Settings API Wrapper",
     "type": "library",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alpipego\\AWP\\Settings\\": "src"
+        }
+    },
     "authors": [
         {
             "name": "alpipego",
