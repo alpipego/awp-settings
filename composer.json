@@ -1,0 +1,13 @@
+{
+    "name": "alpipego/awp-settings",
+    "description": "Settings API Wrapper",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alpipego",
+            "email": "alpipego@gmail.com"
+        }
+    ],
+    "require": {}
+}
