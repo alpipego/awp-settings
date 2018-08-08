@@ -15,22 +15,20 @@ namespace Alpipego\AWP\Settings;
  */
 interface OptionsSectionInterface
 {
-
     /**
      * @return void
      */
-    function run();
+    public function run();
 
     /**
      * Wrapper for `add_settings_section`
      *
      * @return void
      */
-    function addSection();
+    public function addSection();
 
     /**
      * @return mixed
      */
-    function callback();
-
+    public function callback();
 }
