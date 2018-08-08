@@ -44,7 +44,7 @@ abstract class AbstractOption
      */
     public function __construct($page, $section, $pluginPath)
     {
-        $this->viewsPath    = $pluginPath . 'views/';
+        $this->viewsPath    = trailingslashit($pluginPath) . 'views/';
         $this->optionsPage  = $page;
         $this->optionsGroup = $section;
     }
@@ -63,7 +63,7 @@ abstract class AbstractOption
      */
     public function registerSetting()
     {
-        \register_setting($this->optionsGroup['id'], $this->optionsField['id'], [$this, 'sanitize']);
+        \register_setting($this->optionsGroup, $this->optionsField['id'], [$this, 'sanitize']);
     }
 
     /**
@@ -71,10 +71,14 @@ abstract class AbstractOption
      */
     public function addField()
     {
-        \add_settings_field($this->optionsField['id'], $this->optionsField['title'], [
-            $this,
-            'callback',
-        ], $this->optionsPage, $this->optionsGroup, !empty($this->optionsField['args']) ? $this->optionsField['args'] : []);
+        \add_settings_field(
+            $this->optionsField['id'],
+            $this->optionsField['title'],
+            [$this, 'callback'],
+            $this->optionsPage,
+            $this->optionsGroup,
+            !empty($this->optionsField['args']) ? $this->optionsField['args'] : []
+        );
     }
 
     /**
