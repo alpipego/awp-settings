@@ -43,7 +43,7 @@ abstract class AbstractOptionsSection
      */
     public function __construct(string $page, string $pluginPath)
     {
-        $this->viewsPath   = $pluginPath . 'views/';
+        $this->viewsPath   = trailingslashit($pluginPath) . 'views/';
         $this->optionsPage = $page;
     }
 
